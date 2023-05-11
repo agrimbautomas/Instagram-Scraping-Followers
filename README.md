@@ -6,8 +6,7 @@ A simple tool to get list of followers
 
 ### Installing:
 1. Download and install Python - https://www.python.org/
-2. Open CMD, console, or PowerShell. Install the selenium package - `pip install selenium`
-3. Download the chromedriver (corresponds to your chrome version) - https://chromedriver.chromium.org/. Put it to the bot folder.
+2. Change name
 
 ### Using:
 1. Open scraping.py using any text editor.

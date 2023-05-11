@@ -21,18 +21,18 @@ result = 'usernames'
 
 us = ''
 
-
-
+load_dotenv()
+USERNAME = os.getenv('USERNAME')
+PASSWORD = os.getenv('PASSWORD')
 
 class Instagram():
 	def __init__(self, username, password):
-		load_dotenv()
-		USERNAME = os.getenv('USERNAME')
-		PASSWORD = os.getenv('PASSWORD')
-		print("Initializing bot..." + USERNAME)
+		
+		print(username)
+		print(password)
 
-		self.username = USERNAME
-		self.password = PASSWORD
+		self.username = username
+		self.password = password
 		options = Options()
 		options.add_experimental_option("excludeSwitches", ["enable-logging"])
 		self.browser = web.Chrome(ChromeDriverManager().install())
@@ -117,7 +117,6 @@ class Instagram():
 		
 		return followers_list
 
-
-bot = Instagram(bot_username, bot_password)
+bot = Instagram(USERNAME, PASSWORD)
 bot.login()
 followers = bot.get_followers(profiles, amount)
