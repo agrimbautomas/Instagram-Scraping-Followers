@@ -11,7 +11,7 @@ from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
 
 # Username to scrape followers
-profiles = ['gunther.super']
+profiles = ['amalgama.co']
 
 # Amount of users to scrape
 amount = 30
