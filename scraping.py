@@ -27,10 +27,6 @@ PASSWORD = os.getenv('PASSWORD')
 
 class Instagram():
 	def __init__(self, username, password):
-		
-		print(username)
-		print(password)
-
 		self.username = username
 		self.password = password
 		options = Options()

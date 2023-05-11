@@ -1,14 +1,10 @@
 # Instagram-Scraping-Followers
 A simple tool to get list of followers
 
-[![GitHub followers](https://img.shields.io/github/followers/Gunthersuper?label=Follow&style=social)](https://github.com/Gunthersuper)
-[![streamlabs](https://img.shields.io/badge/Donate-%241-red)](https://streamlabs.com/gunther2/tip)
+[![GitHub followers](https://img.shields.io/github/followers/tomagr?label=Follow&style=social)](https://github.com/tomagr)
 
-### Installing:
-1. Download and install Python - https://www.python.org/
-2. Change name
 
-### Using:
-1. Open scraping.py using any text editor.
-2. Make configuration (enter username, password, profiles to scrap and amount)
-3. Open CMD, console, or PowerShell in the bot folder. Enter: `py scraping.py`
+### Installation an usage:
+1. Install requirements using terminal or command line. You should run this command pip install -r requirements.txt.
+2. Change rename .env.sample to .env and set USERNAME and PASSWORD of the Instagram bot account.
+3. run 'python scraping.py'
