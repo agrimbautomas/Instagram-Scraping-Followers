@@ -1,29 +1,41 @@
 from selenium import webdriver as web
 from selenium.webdriver.common.keys import Keys
+from webdriver_manager.chrome import ChromeDriverManager
+
 import time
 import random
+import os
+
+from dotenv import load_dotenv
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
 
-bot_username = ''
-bot_password = ''
-
+# Username to scrape followers
 profiles = ['gunther.super']
+
+# Amount of users to scrape
 amount = 30
 
-# 'usernames' or 'links'
+# Type of result to return. Values could be 'usernames' or 'links'
 result = 'usernames'
 
 us = ''
 
 
+
+
 class Instagram():
 	def __init__(self, username, password):
-		self.username = username
-		self.password = password
+		load_dotenv()
+		USERNAME = os.getenv('USERNAME')
+		PASSWORD = os.getenv('PASSWORD')
+		print("Initializing bot..." + USERNAME)
+
+		self.username = USERNAME
+		self.password = PASSWORD
 		options = Options()
 		options.add_experimental_option("excludeSwitches", ["enable-logging"])
-		self.browser = web.Chrome("chromedriver",options=options)
+		self.browser = web.Chrome(ChromeDriverManager().install())
 		self.browser.set_window_size(400, 900)
 
 	def close_browser(self):
